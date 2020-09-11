@@ -1,8 +1,8 @@
 function LongestWord(sen) { 
   const punctuationless = sen.replace(/[^\w\s]/g,"");
-  console.log(punctuationless);
+  // console.log(punctuationless);
   sen = punctuationless.split(" ")
-  console.log(sen);
+  // console.log(sen);
   sen.sort(function(a,b){return(b.length-a.length)});
   // code goes here  
   return sen[0]; 
