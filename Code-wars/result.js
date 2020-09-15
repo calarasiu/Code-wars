@@ -15,6 +15,8 @@ oneElementArray [ 8 ]
 oneElementArray [ 3 ]
 currentLeftIndex 0
 currentRightIndex 0
+sortedLeft [ 8 ]
+sortedRight [ 3 ]
 insidewhile
 left [ 8 ]
 right [ 3 ]
@@ -27,6 +29,8 @@ inside if
 sortedArray [ 3, 8 ]
 currentLeftIndex 0
 currentRightIndex 0
+sortedLeft [ 2 ]
+sortedRight [ 3, 8 ]
 insidewhile
 left [ 2 ]
 right [ 8, 3 ]
@@ -55,6 +59,8 @@ oneElementArray [ 9 ]
 oneElementArray [ 5 ]
 currentLeftIndex 0
 currentRightIndex 0
+sortedLeft [ 9 ]
+sortedRight [ 5 ]
 insidewhile
 left [ 9 ]
 right [ 5 ]
@@ -67,6 +73,8 @@ inside if
 sortedArray [ 5, 9 ]
 currentLeftIndex 0
 currentRightIndex 0
+sortedLeft [ 1 ]
+sortedRight [ 5, 9 ]
 insidewhile
 left [ 1 ]
 right [ 9, 5 ]
@@ -84,10 +92,11 @@ inside else
 sortedArray [ 1, 5, 9 ]
 currentLeftIndex 0
 currentRightIndex 0
+sortedLeft [ 2, 3, 8 ]
+sortedRight [ 1, 5, 9 ]
 insidewhile
 left [ 2, 8, 3 ]
 right [ 1, 9, 5 ]
-// to go on from here
 inside else
 sortedArray [ 1 ]
 insidewhile

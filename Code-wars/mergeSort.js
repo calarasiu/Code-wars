@@ -28,7 +28,8 @@ function mergeSort(arrayToSort) {
   let currentRightIndex = 0;
   console.log("currentLeftIndex", currentLeftIndex);
   console.log("currentRightIndex", currentRightIndex);
-
+  console.log("sortedLeft", sortedLeft);
+  console.log("sortedRight", sortedRight);
   while (sortedArray.length < left.length + right.length) {
     console.log("insidewhile");
     console.log("left",left);

@@ -1,25 +1,23 @@
-const hiCall = [
-  { startTime: 4,  endTime: 8 },
-  { startTime: 0,  endTime: 1 },
-  { startTime: 10, endTime: 12 },
-  { startTime: 3,  endTime: 5 },
-  { startTime: 9,  endTime: 10 }
-];
-hiCall.sort(function(a,b){return (a.startTime - b.startTime)})
-freeTeams = [];
-for(i=0;i<hiCall.length-1;i++){
-  let currentMeeting = hiCall[i];
-  let nextMeeting = hiCall[i+1];    
-  if(nextMeeting.endTime =< currentMeeting.startTime && nextMeeting.endTime > currentMeeting.endTime){
-    freeTeams.push({startTime:hiCall[i].startTime, endTime:hiCall[i+1].endTime})
-  }else if(hiCall[i].endTime >=hiCall[i+1].startTime && hiCall[i+1].endTime < hiCall[i].endTime){
-    freeTeams.push({startTime:hiCall[i].startTime, endTime:hiCall[i].endTime})
-  }else{
-    freeTeams.push({startTime:hiCall[i].startTime, endTime:hiCall[i].endTime})
-  }
+function mergeRanges(meetings) {
+
+  // Merge meetings ranges
+  const sortMeetings = meetings.sort(function(a,b){return(a.startTime - b.startTime)});
+  const mergedMeetings  = []
+  mergedMeetings.push(sortMeetings[0]);
+  for(let i=1; i<sortMeetings.length;i++){
+    if(sortMeetings[i].startTime > mergedMeetings[mergedMeetings.length-1].endTime){
+       mergedMeetings.push(sortMeetings[i]);
+    } else {
+      mergedMeetings[mergedMeetings.length-1].endTime = Math.max(sortMeetings[i].endTime, mergedMeetings[mergedMeetings.length-1].endTime)
+    }
+    
+  };
+
+  return mergedMeetings;
 }
 
-console.log(freeTeams);
+
+console.log(mergeRanges([{ startTime: 1, endTime: 3 }, { startTime: 2, endTime: 4 }]));
 
 
 
