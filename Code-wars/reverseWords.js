@@ -24,4 +24,4 @@ function reverse(startLine, finishLine, toReverse){
   }
 }
 
-console.log(reverseWords([ 'c', 'a', 'k', 'e', ' ','p', 'o', 'u', 'n', 'd', ' ','s', 't', 'e', 'a', 'l' ]));
+console.log(reverseWords([ 'c', 'a', 'k', 'e', ' ','p', 'o', 'u', 'n', 'd', ' ','s', 't', 'e', 'a', 'l'," ","h","e","y","!" ]));
