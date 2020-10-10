@@ -9,19 +9,23 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-const isPalindrome = function(head) {
-  let curr = head;
-  const traverse = node => {
-      if (node === null) {
-          return true;
-      }
-      // traverse to the end of the list first
-      const prevIsSame = traverse(node.next);
-      // when the call stack bounces back, compare the values 
-      // from the head and from the bottom up
-      const currIsSame = curr.val === node.val;
-      curr = curr.next;
-      return prevIsSame && currIsSame;
-  }
-  return traverse(head);
+var isPalindrome = function(head) {
+    
+	if (!head) return true
+	
+	function helper (node, arr) {
+        if (!node) return []
+        arr.push(node.val)
+        if (node.next) helper(node.next, arr)
+        return arr
+    }
+    
+	// All node values
+    const A = helper(head, [])
+	// A reversed
+    const B = [...A].reverse()
+	
+    // check if A and B are equal
+    return A.length === B.length && A.every((value, index) => value === B[index])
 };
+
