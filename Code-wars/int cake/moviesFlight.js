@@ -6,14 +6,15 @@ const searchMovie =((movies, flight)=>{
 
   for(let i=0; i<movies.length; i++){
     let secondMovie = flight - movies[i];
+    console.log('this movie', movies[i]);
     console.log('to find', secondMovie);
     if(secondMovie in moviesLengths){
       console.log('in');
       return true;
     } else{
-      console.log('add', secondMovie);
-      moviesLengths[secondMovie] = i;
-      console.log(moviesLengths.length);
+      console.log('add', movies[i]);
+      moviesLengths[movies[i]] = i;
+      console.log(Object.keys(moviesLengths).length);
     }
   }
   return false;
