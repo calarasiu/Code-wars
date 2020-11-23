@@ -1,0 +1,4 @@
+.centralPage{
+  display: flex;
+  justify-content: space-between;
+}
