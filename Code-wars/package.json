@@ -1,0 +1,16 @@
+{
+  "name": "code_wars",
+  "version": "1.0.0",
+  "description": "code wars challenges",
+  "main": "addTwoReversedNumbers.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
+}
