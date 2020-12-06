@@ -1,25 +1,14 @@
 function duplicateEncode(word){
-  let wordCounter={};
   const lowerCaseWord = word.toLowerCase();
+  let brackets = "";
   for(let i=0; i< lowerCaseWord.length; i++){
-    if(wordCounter[lowerCaseWord[i]]){
-      wordCounter[lowerCaseWord[i]]+=1;
-      console.log("incremented", wordCounter[lowerCaseWord[i]])
+    if(lowerCaseWord.lastIndexOf(lowerCaseWord[i]) === lowerCaseWord.indexOf(lowerCaseWord[i])){
+      brackets +="(";
     }else{
-      wordCounter[lowerCaseWord[i]] = 1;
-      console.log("declared", wordCounter[lowerCaseWord[i]])
+      brackets +=")";
     }
   }
-
-  const bracketWords = Array.from(lowerCaseWord);
-  const brackets = bracketWords.map((ch)=>{
-    if(wordCounter[ch] === 1){
-      return wordCounter[ch];
-    }else{
-      return wordCounter[ch];
-    }
-  })
-  return brackets.join("");
+  return brackets;
 }
 
 console.log(duplicateEncode("Wordo"));
