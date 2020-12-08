@@ -1,4 +1,7 @@
 function duplicateEncode(word){
+  if(word.length <=0 || typeof word != "string"){
+    return "";
+  }
   const lowerCaseWord = word.toLowerCase();
   let brackets = "";
   for(let i=0; i< lowerCaseWord.length; i++){
@@ -11,4 +14,6 @@ function duplicateEncode(word){
   return brackets;
 }
 
-console.log(duplicateEncode("Wordo"));
+// console.log(duplicateEncode("Wordo"));
+
+module.exports = duplicateEncode;
