@@ -14,5 +14,8 @@ test("test for empty strings", ()=>{
 
 test("Test the function for inputs that are different from strings", ()=>{
   expect(duplicateEncoder(123)).toBe("");
+  expect(duplicateEncoder(false)).toBe("");
   expect(duplicateEncoder(true)).toBe("");
 })
+
+
