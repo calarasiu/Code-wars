@@ -1,3 +1,4 @@
+// check which is the time interval when all the teams are free, given the meetings time intervals 
 function mergeRanges(meetings) {
 
   // Merge meetings ranges
